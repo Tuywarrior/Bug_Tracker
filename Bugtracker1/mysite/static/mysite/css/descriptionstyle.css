@@ -1,0 +1,85 @@
+body {
+    background-image: url(pic2.jfif);
+    background-color: #cccccc;
+  }
+  .topnav {
+    background-color: #333;
+    overflow: hidden;
+  }
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: chartreuse;
+    color: rgba(0, 0, 0, 0.692);
+  }
+  .topnav a.active {
+    background-color: #04a6ed;
+    color: white;
+    font-weight: bold;
+    float: right;
+  }
+  .bugdesc {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 3.2rem;
+    letter-spacing: 2px;
+    padding: 0 1rem;
+  }
+  .bd {
+    font-size: 1.5rem;
+    letter-spacing: 0.8px;
+    padding: 0 10px;
+    max-width: width 100%;
+    line-height: 1;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+  }
+  .parent {
+    display: flex;
+    width: 85%;
+    justify-content: space-around;
+    margin: 10px;
+  }
+  .bd {
+    flex: 1;
+    border: 2px solid blueviolet;
+    margin: 10px;
+    height: 250px;
+    justify-content: space-around;
+    text-align: left;
+  }
+  .tag {
+    font-size: 32px;
+    line-height: 60px;
+    justify-content: space-between;
+    text-align: center;
+    margin-left: 50px;
+    display: block;
+  }
+  .low {
+    /* background-color: blue; */
+    border-radius: 20px;
+  }
+  .medium {
+    /* background-color: yellow; */
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
+    border-radius: 20px;
+  }
+  .high {
+    /* background-color: red; */
+    border-radius: 20px;
+  }
+
+.btn{
+    width : 200px !important;
+}

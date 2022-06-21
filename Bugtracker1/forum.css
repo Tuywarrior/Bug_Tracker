@@ -1,0 +1,59 @@
+body {
+  margin: 10px 60px;
+  padding: 0;
+  /* background: url(forum.jpg);
+  color: #fff; */
+}
+h1 {
+  text-align: center;
+  background-color: cadetblue;
+  font-size: 60px;
+}
+h1,
+h4 {
+  margin: 0;
+}
+p {
+  margin: 5px 0;
+}
+.main {
+  background-color: #f6f6ef;
+  padding: 10px 40px;
+}
+textarea {
+  width: 80%;
+  height: 80px;
+}
+button {
+  display: block;
+  margin: 10px 0;
+}
+.topbar {
+  background-color: cadetblue;
+  padding: 0 40px;
+}
+.title {
+  padding: 10px 5px;
+}
+.comments {
+  margin: 40px 0;
+}
+.comment {
+  margin: 25px 0;
+}
+.row {
+  padding: 5px 0;
+}
+.bottom,
+.top-comment {
+  display: flex;
+  color: grey;
+  font-size: 12px;
+}
+.timestamp {
+  padding-right: 10px;
+}
+.comment-ts {
+  padding-right: 10px;
+  padding-left: 10px;
+}

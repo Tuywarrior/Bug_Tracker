@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <title>Sign-Up</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'mysite/css/loginstyle.css' %}" />
+</head>
+<body>
+    <div class="signupbox">
+      <img src="avatar.jpg" class="avatar" />
+      <h1>SIGNUP HERE!</h1>
+      <form enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+        <p>Username</p>
+        {% comment %} <input type="text" name="" placeholder="ENTER USERNAME" /> {% endcomment %}
+        {{user_form.username}}
+        <p>Email-Id</p>
+        {% comment %} <input type="email" name="" placeholder="ENTER EMAIL" /> {% endcomment %}
+        {{user_form.email}}
+        <p>Password</p>
+        {% comment %} <input type="password" name="" placeholder="ENTER password" /> {% endcomment %}
+        {{user_form.password}}
+        </form>
+        <input type="submit" value="Sign-Up">
+      </form>
+      {{form.errors}}
+      <a href="{% url 'mysite:login' %}">Back to login</a>
+    </div>
+
+
+    <script>
+
+        var form_fields = document.getElementsByTagName('input')
+        form_fields[1].placeholder='ENTER USERNAME';
+        form_fields[2].placeholder='name@example.com';
+        form_fields[3].placeholder='Password';
+        form_fields[1].type='text';
+        form_fields[2].type='email';
+        form_fields[3].type='password';
+
+    </script>
+  </body>

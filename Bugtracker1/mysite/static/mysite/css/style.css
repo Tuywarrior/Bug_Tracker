@@ -1,0 +1,97 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+#nav-bar {
+    background-color: white;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-bar-options {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    gap: 36px;
+    padding: 8px;
+}
+
+.link {
+    color: orangered;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.link:hover {
+    color: white;
+    background-color: orangered;
+}
+
+#bug-list {
+    display: flex;
+    flex-direction: column;
+    margin: 32px;
+    gap: 32px;
+}
+
+.bug-title {
+    margin: 0;
+}
+
+.tile {
+    border: 2px solid orangered;
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 12px;
+}
+
+.tile-header {
+    display: flex;
+    gap: 20px;
+}
+
+.severity, .status{
+    font-size: 14px;
+    border-radius: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: white;
+}
+
+.H {
+    background-color: red;
+}
+
+.M {
+    background-color: yellow;
+    color: black;
+}
+
+.L {
+    background-color: green;
+}
+
+.unresolved {
+    background-color:darkblue
+}
+
+.resolved {
+    background-color: chartreuse;
+    color: black;
+}

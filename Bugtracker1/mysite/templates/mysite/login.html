@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'mysite/css/loginstyle.css' %}"
+    />
+  </head>
+  <body>
+    <div class="loginbox">
+      <img src="{% static 'mysite/images/avatar.jpg' %}" class="avatar" />
+      <h1>LOGIN HERE!</h1>
+      <form enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+        <p>username</p>
+        <input type="text" name="username" placeholder="ENTER USERNAME" />
+        <p>password</p>
+        <input type="password" name="password" placeholder="ENTER password" />
+        <input type="submit" value="login" />
+        <a href="{% url 'mysite:sign-up' %}"> SIGN UP</a>
+      </form>
+    </div>
+  </body>
+</html>

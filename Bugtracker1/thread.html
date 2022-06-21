@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+  
+  <title>FORUM</title>
+  <link rel="stylesheet" type="text/css" href="descriptionstyle.css" />
+  <link rel="stylesheet" type="text/css" href="forum.css" />
+  <body>
+    
+    <div class="topnav">
+      <a href="#">Home</a>
+      <a href="#">MyBugs</a>
+      <a class="active" href="#">Logout</a>
+    </div>
+    <div class="main">
+
+      <label class="bugdesc main"  for="bd">Bug Description:</label>
+      <div class="parent main">
+      <textarea class="bd" name="bd" rows="10" cols="100"></textarea>
+      <div class="tag">
+        <div class="bugs"><strong>BUG SEVERITY</strong></div>
+        <div class="low">LOW</div>
+        <div class="medium">MEDIUM</div>
+        <div class="high">HIGH</div>
+      </div>
+    </div>
+  </div>
+    <div class="new">
+      
+    </div>
+      <div class="topbar">
+      </div>
+      <div class="main">
+        <div class="header">
+        </div>
+        <textarea class="jsta"></textarea>
+        <button>addcomment</button>
+        <div class="comments">
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    var id=window.location.search.slice(1);
+    var thread=threads.find(t=>t.id==id);
+    var header=document.querySelector('.header');
+    var headerhtml=`
+    <h4 class="title">${thread.title}</h4>
+        <div class="bottom">
+          <p class=timeswap">${new Date(thread.date).toLocaleString()}</p>
+          <p class="comment-count">${thread.comments.length} comments</p>
+        </div>
+    `
+    header.insertAdjacentHTML('beforeend',headerhtml)
+
+    function addComment(comment){
+
+      var commentHtml=`
+      <div class="comment">
+          <div class="top-comment">
+            <p class="user">${comment.author}
+            </p>
+            <p class="comment-ts">${new Date(comment.date).toLocaleString()}
+            </p> 
+          </div>
+          <div class="comment-content">
+            ${comment.content}
+          </div>
+        </div>
+        `
+        comments.insertAdjacentHTML('beforeend',commentHtml);
+    }
+    var comments=document.querySelector('.comments');
+    for(let comment of thread.comments)
+    {
+      addComment(comment);
+    }
+    var btn=document.querySelector('button');
+    btn.addEventListener('click',function(){
+      var txt=document.querySelector('.jsta');
+      var comment={
+        content:txt.value,
+        date:Date.now(),
+        author:'user1'
+      }
+      addComment(comment);
+      txt.value='';
+      thread.comments.push(comment);
+      localStorage.setItem('threads',JSON.stringify(threads));
+    })
+  </script>
+</div>
+</body>
+</head>

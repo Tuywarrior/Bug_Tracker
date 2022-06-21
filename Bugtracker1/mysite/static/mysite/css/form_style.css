@@ -1,0 +1,41 @@
+.form-container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    border-radius: 10px;
+    padding: 50px;
+    max-width: 600px;
+    align-self: center;
+    background: -webkit-linear-gradient(to left, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.bug-title, .bug-desc{
+    display: flex;
+    gap: 48px;
+    margin: 36px;
+}
+
+.submit {
+    margin: 10px;
+    padding: 16px;
+    color: orangered;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.submit:hover {
+    border: 2px solid black;
+}
+input {
+    border-radius: 10px;
+    border: 2px solid black;
+    font-size: 20px;
+}
